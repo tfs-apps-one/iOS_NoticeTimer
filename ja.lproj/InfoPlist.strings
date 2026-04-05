@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  NoticeTimer
+
+  Created by 古川貴史 on 2026/03/25.
+  
+*/
+"CFBundleDisplayName" = "通知タイマー";
+"CFBundleName" = "通知タイマー";
+        
