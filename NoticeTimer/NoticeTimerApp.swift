@@ -7,12 +7,17 @@
 
 import SwiftUI
 import AVFoundation
+import GoogleMobileAds
 
 
 @main
 struct NoticeTimerApp: App {
     init (){
         setupAudioSession()
+        //広告初期化
+        //GADMobileAds.sharedInstance().start(completionHandler: nil)
+        //MobileAds.sharedInstance().start(completionHandler: nil)
+        MobileAds.shared.start(completionHandler: { _ in })
     }
     var body: some Scene {
         WindowGroup {

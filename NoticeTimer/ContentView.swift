@@ -9,6 +9,8 @@ import SwiftUI
 import AVFoundation
 import AudioToolbox
 import UIKit
+import GoogleMobileAds
+
 
 class AlarmPlayer {
     static let shared = AlarmPlayer()
@@ -321,6 +323,16 @@ struct ContentView: View {
         .padding(.horizontal)
 
         Spacer()
+
+        //広告
+        BannerAdView()
+        //                .frame(width: 320, height: 50)  // バナー広告のサイズ
+            .frame(width: AdSizeBanner.size.width, height:
+                    AdSizeBanner.size.height)
+        //上下予約エリア確保
+        Spacer()
+            .frame(height: 5)
+
     }
     
     func Press_10min(){

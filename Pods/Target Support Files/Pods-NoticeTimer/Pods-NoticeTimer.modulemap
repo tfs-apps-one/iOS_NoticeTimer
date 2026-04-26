@@ -1,0 +1,6 @@
+framework module Pods_NoticeTimer {
+  umbrella header "Pods-NoticeTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
