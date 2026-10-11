@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import UserNotifications
 import GoogleMobileAds
 
 
@@ -14,6 +15,11 @@ import GoogleMobileAds
 struct NoticeTimerApp: App {
     init (){
         setupAudioSession()
+        // 評価ポップアップ表示判定のため、起動回数と初回起動日を記録
+        ReviewManager.recordAppLaunch()
+        // バックグラウンド/画面ロック中でもタイムアップ通知を出すための
+        // ローカル通知デリゲートを、起動時点で確実に登録しておく
+        UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
         //広告初期化
         //GADMobileAds.sharedInstance().start(completionHandler: nil)
         //MobileAds.sharedInstance().start(completionHandler: nil)

@@ -9,5 +9,7 @@
 		<string>en</string>
 		<string>ja</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>タイムアップ時にライト（フラッシュ）を点滅させるために使用します。</string>
 </dict>
 </plist>
